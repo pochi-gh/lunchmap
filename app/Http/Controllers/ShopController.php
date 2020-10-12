@@ -44,7 +44,7 @@ class ShopController extends Controller
       $shop->address = request('address');
       $shop->category_id = request('category_id');
       $shop->save();
-      return redirect()->route('shop.show',['$id' => $shop->id]);
+      return redirect()->route('shop.show',['id' => $shop->id]);
     }
 
     /**
@@ -57,6 +57,7 @@ class ShopController extends Controller
     {
       $shop =Shop::find($id);
       return view('show',compact('shop'));
+
     }
 
     /**
