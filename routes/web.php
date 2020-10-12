@@ -21,3 +21,5 @@ Route::get('/shops', 'App\Http\Controllers\ShopController@index')->name('shop.li
 Route::get('/shop/new','App\Http\Controllers\ShopController@create')->name('shop.new');
 Route::post('users/', 'App\Http\Controllers\ShopController@store')->name('shop.store');
 Route::get('/shop/{id}', 'App\Http\Controllers\ShopController@show')->name('shop.show');
+Route::get('/shop/edit/{id}', 'App\Http\Controllers\ShopController@edit')->name('shop.edit');
+Route::post('/shop/update/{id}', 'App\Http\Controllers\ShopController@update')->name('shop.update');
