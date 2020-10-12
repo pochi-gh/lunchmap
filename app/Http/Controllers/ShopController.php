@@ -38,7 +38,13 @@ class ShopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $shop = new Shop;
+
+      $shop->name = request('name');
+      $shop->address = request('address');
+      $shop->category_id = request('category_id');
+      $shop->save();
+      return redirect()->route('shop.show',['$id' => $shop->id]);
     }
 
     /**
