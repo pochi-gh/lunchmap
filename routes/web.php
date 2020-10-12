@@ -18,4 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/shops', 'App\Http\Controllers\ShopController@index')->name('shop.list');
+Route::get('/shop/new','App\Http\Controllers\ShopController@create')->name('shop.new');
+Route::post('users/{id}', 'App\Http\Controllers\ShopController@store')->name('shop.store');
 Route::get('/shop/{id}', 'App\Http\Controllers\ShopController@show')->name('shop.show');
