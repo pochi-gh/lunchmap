@@ -66,9 +66,12 @@ class ShopController extends Controller
      * @param  \App\Models\Shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function edit(Shop $shop)
+    public function edit($id,Shop $shop)
     {
-        //
+      $shop = Shop::find($id);
+      $categories = Category::all()->pluck('name','id');
+
+      return view('edit',compact('shop','categories'));
     }
 
     /**
