@@ -10,6 +10,9 @@
     <div>
         <a href="{{route('shop.edit',['id' => $shop->id])}}">編　集</a>｜
         <a href="{{route('shop.list')}}">一覧に戻る</a>
+        {{ Form::open(['method' => 'delete', 'route' => ['shop.destroy', $shop->id]]) }}
+          {{ Form::submit('削除') }}
+        {{ Form::close() }}
     </div>
 @endsection
 
