@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/shops');
 });
+
+Route::get('/shops', 'App\Http\Controllers\ShopController@index')->name('shop.list');
