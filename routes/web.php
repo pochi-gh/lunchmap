@@ -23,3 +23,4 @@ Route::post('users/', 'App\Http\Controllers\ShopController@store')->name('shop.s
 Route::get('/shop/{id}', 'App\Http\Controllers\ShopController@show')->name('shop.show');
 Route::get('/shop/edit/{id}', 'App\Http\Controllers\ShopController@edit')->name('shop.edit');
 Route::post('/shop/update/{id}', 'App\Http\Controllers\ShopController@update')->name('shop.update');
+Route::delete('/shop/{id}', 'App\Http\Controllers\ShopController@destroy')->name('shop.destroy');
