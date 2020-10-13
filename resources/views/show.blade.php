@@ -15,11 +15,13 @@
     </iframe>
     <div>
         @auth
+          @if ($shop->user_id === $login_user)
             <a href="{{route('shop.edit',['id' => $shop->id])}}">編　集</a>｜
             {{ Form::open(['method' => 'delete', 'route' => ['shop.destroy', $shop->id]]) }}
             {{ Form::submit('削除') }}
             {{ Form::close() }}
-        @endif
+          @endif
+        @endauth
             <a href="{{route('shop.list')}}">一覧に戻る</a>
     </div>
 @endsection

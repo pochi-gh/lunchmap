@@ -14,7 +14,7 @@
               <a href={{route('shop.show',['id' => $shop->id])}}>{{ $shop->name }}</a>
             </td>
             <td>{{ $shop->address }}</td>
-
+            <td>{{ $shop->user->name }}</td>
           </tr>
 
         @endforeach
