@@ -9,8 +9,8 @@
     </div>
 
     <iframe id='map' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBoVWxeSi6-7Wa7BcKsNM4_82n73fooNTo&amp;q={{ $shop->address }}'
-      width='100%'
-      height='320'
+      width='640'
+      height='640'
       frameborder='0'>
     </iframe>
     <div>

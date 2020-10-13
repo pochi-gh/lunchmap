@@ -24,3 +24,7 @@ Route::get('/shop/{id}', 'App\Http\Controllers\ShopController@show')->name('shop
 Route::get('/shop/edit/{id}', 'App\Http\Controllers\ShopController@edit')->name('shop.edit');
 Route::post('/shop/update/{id}', 'App\Http\Controllers\ShopController@update')->name('shop.update');
 Route::delete('/shop/{id}', 'App\Http\Controllers\ShopController@destroy')->name('shop.destroy');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
