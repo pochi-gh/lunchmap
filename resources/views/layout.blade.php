@@ -5,13 +5,13 @@
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
         <meta name='csrf-token' content='{{ csrf_token()}}'>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' >
-
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
         <title>Lunchmap</title>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
-        <nav>
+        <nav class='nav-area'>
             <div class="flex justify-between">
               <!-- Logo -->
                 <a class='navbar-brand' href={{route('shop.list')}}>Lunchmap</a>
